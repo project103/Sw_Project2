@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                 <a class="nav-link" href="members.html">
+                    <i class='bx bx-male-female'></i>                   
+                    <span>Members</span>
+                </a>
+               
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="books.html">
+                    <i class='bx bxs-add-to-queue' ></i>
+                    <span>Books</span>
+                </a>
+                
+            </li>
+            
+
+            <li class="nav-item">
+                <a class="nav-link" href="show-categories.html">
+                    <i class='bx bx-archive-in' ></i>
+                    <span>Categories</span>
+                </a>
+
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            
+            <!-- Nav Item - Charts -->
+            
+
+            <!-- Sidebar Message -->
+            <!-- <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            </div> -->
+
+        </ul>
+        <!-- id	age	email	gender	job	joined	name	password	phone	profile_pic	 user_role	 -->
+
+
+    <div class="container-fluid">
+       <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-5 d-inline">Update Book</h5>
+              <form method="post" id="updateForm" action="/books/update/{bookId}" enctype="multipart/form-data">
+                <!-- Email input -->
+                <div class="form-outline mb-4 mt-4">
+                    <select name="categoryName" id="categoryName" class="form-control">
+                        <option value="" selected disabled >Select Category</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4 mt-4">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Book Name" />
+                </div>
+                <div class="form-outline mb-4 mt-4">
+                    <input type="text" name="author" id="author" class="form-control" placeholder="Author" />
+                  </div>
+                <div class="form-outline mb-4 mt-4">
+                    <input type="text" name="description" id="description" class="form-control" placeholder="Description" />
+                  </div>
+                  <div class="form-outline mb-4 mt-4">
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Price" />
+                  </div>
+                
+                <div class="form-outline mb-4 mt-4">
+                    <input type="text" name="copies" id="copies" class="form-control" placeholder="Copies" />
+                </div>
+
+                  <div class="form-outline mb-4 mt-4">
+                      <select name="format" id="format" class="form-control">
+                          <option value="" selected disabled>Select Format</option>
+                          <option value="book">book</option>
+                          <option value="ebook">ebook</option>
+                      </select>
+                  </div>
+
+                  <div class="form-outline mb-4 mt-4">
+                      <input type="text" name="length" id="length" class="form-control" placeholder="Length" />
+                  </div>
+
+                  <div class="form-outline mb-4 mt-4">
+                      <input type="text" name="rating" id="rating" class="form-control" placeholder="Rating" />
+                  </div>
+
+                  <div class="form-outline mb-4 mt-4">
+                      <input type="text" name="edition" id="edition" class="form-control" placeholder="Edition" />
+                  </div>
+
+                  <div class="form-outline mb-4 mt-4">
+                      <input type="text" name="language" id="language" class="form-control" placeholder="Language" />
+                  </div>
+                <!-- Submit button -->
+                <button type="submit" id="updateButton" class="btn btn-primary  mb-4 text-center">Update</button>
+
+          
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+        <!-- Include jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:8090/categories/all",
+                    success: function(data) {
+                        data.forEach(function(category) {
+                            $("#categoryName").append(`<option value="${category.name}">${category.name}</option>`);
+                        });
+                    },
+                    error: function() {
+                        console.error("error");
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                // Function to get book data by ID and populate the update form
+                function getBookDataById(bookId) {
+                    $.ajax({
+                        url: "http://localhost:8090/books/GetById/" + bookId,
+                        type: "GET",
+                        dataType: "json",
+                        success: function(data) {
+                            // Populate the form fields with the retrieved book data
+                            $("#categoryName").val(data.category.name);
+                            $("#name").val(data.name);
+                            $("#author").val(data.author);
+                            $("#description").val(data.description);
+                            $("#price").val(data.price);
+                            $("#copies").val(data.copies);
+                            $("#format").val(data.format);
+                            $("#length").val(data.length);
+                            $("#rating").val(data.rating);
+                            $("#edition").val(data.edition);
+                            $("#language").val(data.language);
+                        },
+                        error: function() {
+                            console.error("error");
+                        }
+                    });
+                }
+
+                // Retrieve the book ID from the URL query parameter
+                var urlParameter = new URLSearchParams(window.location.search);
+                var bookId = urlParameter.get('id');
+
+                // Call the function to fetch and populate book data
+                getBookDataById(bookId);
+
+                // Handle form submission
+                $("#updateForm").submit(function(event) {
+                    event.preventDefault();
+
+                    // Get form data
+                    var formData = {
+                        category: {
+                            name: $("#categoryName").val() // Correctly retrieve the category name
+                        },
+                        name: $("#name").val(),
+                        author: $("#author").val(),
+                        description: $("#description").val(),
+                        price: $("#price").val(),
+                        copies: $("#copies").val(),
+                        format: $("#format").val(),
+                        length: $("#length").val(),
+                        rating: $("#rating").val(),
+                        edition: $("#edition").val(),
+                        language: $("#language").val()
+                    };
+
+                    // Send a PUT request to update the book
+                    $.ajax({
+                        type: "PUT",
+                        url: "http://localhost:8090/books/update/" + bookId,
+                        data: JSON.stringify(formData),
+                        contentType: "application/json",
+                        success: function(data) {
+                            console.log("Book data updated successfully");
+                            // Optionally, you can redirect or show a success message
+                        },
+                        error: function() {
+                            console.error("error");
+                        }
+                    });
+                });
+            });
+        </script>
+
+        </script>
+    <script>
+
+        if (localStorage.getItem('sessionId') == 0) {
+        } else {
+            window.location.href = '../user/signin.html';
+        }
+    </script>
+
+</body>
+</html>
