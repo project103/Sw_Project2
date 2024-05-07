@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1>
+
+    <!-- Title -->
+    <title>..:: LIBRARIA ::..</title>
+
+    <!-- Favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Mobile Menu -->
+    <link href="css/mmenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/mmenu.positioning.css" rel="stylesheet" type="text/css" />
+
+    <!-- Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<script>
+    localStorage.removeItem('sessionId');
+    localStorage.removeItem('userId');
+</script>
+
+<!-- Start: Page Banner -->
+<section class="page-banner services-banner">
+    <div class="container">
+        <div class="banner-header">
+            <h2>Signin</h2>
+            <span class="underline center"></span>
+            <p class="lead">Proin ac eros pellentesque dolor pharetra tempo.</p>
+        </div>
+        <div class="breadcrumb">
+            <ul>
+                <li>Signin</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End: Page Banner -->
+
+<!-- Start: Cart Section -->
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="signin-main">
+                <div class="container">
+                    <div class="woocommerce">
+                        <div class="woocommerce-login">
+                            <div class="company-info signin-register">
+                                <div class="col-md-5 col-md-offset-1 border-dark-left">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="company-detail bg-dark margin-left">
+                                                <div class="signin-head">
+                                                    <h2>Sign in</h2>
+                                                    <span class="underline left"></span>
+                                                </div>
+                                                <form class="login" method="post" id="loginForm" >
+                                                    <p class="form-row form-row-first input-required">
+
+                                                        <input type="text"  id="username" name="username" class="input-text">
+                                                    </p>
+                                                    <p class="form-row form-row-last input-required">
+
+                                                        <input type="password" id="password" content="password" name="password" class="input-text">
+                                                    </p>
+                                                    <div class="clear"></div>
+                                                    <div class="password-form-row">
+                                                        <p class="form-row input-checkbox">
+                                                            <input type="checkbox" value="forever" id="rememberme" name="rememberme">
+                                                        </p>
+                                                    </div>
+                                                    <p class="new account">
+                                                        <a href="register.html" style="color:orangered">Register?</a>
+                                                    </p>
+                                                    <button type="submit" id="submit" class="button btn btn-default" style="color: orangered;">submit</button>
+
+                                                    <div class="clear"></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- End: Cart Section -->
+
+<!-- Start: Social Network -->
+<section class="social-network section-padding">
+    <div class="container">
+        <div class="center-content">
+            <h2 class="section-title">Follow Us</h2>
+            <span class="underline center"></span>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <ul>
+            <li>
+                <a class="facebook" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-facebook-f"></i>
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a class="twitter" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a class="google" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-google-plus"></i>
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a class="rss" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-rss"></i>
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a class="linkedin" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-linkedin"></i>
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a class="youtube" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-youtube"></i>
+                        </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- End: Social Network -->
+
+<!-- Your jQuery library should be included before your custom script -->
+<!-- jQuery Latest Version 1.x -->
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+<!-- Your custom script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+        // Function to handle form submission
+        $("#loginForm").submit(function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Get form data
+            var formData = {
+                name: $("#username").val(),
+                password: $("#password").val()
+            };
+
+            $.ajax({
+                type: "POST", // Change request type to POST
+                url: "http://localhost:8090/User/login",
+                data: JSON.stringify(formData),
+                contentType: "application/json",
+                success: function(data) {
+                    if (data != null) {
+                        // Redirect to dashboard or another page upon successful login
+
+                        localStorage.setItem('userId' ,data.id);
+                        if (data.userRole == 0) {
+                            localStorage.setItem('sessionId' , 1);
+                            window.location.href = "/user/main.html";
+                        }else if(data.userRole == 1){
+                            localStorage.setItem('sessionId' , 0);
+                            window.location.href = "/admin/index.html";}
+
+                    } else {
+                        // Redirect to sign-in page with error message
+                        displayErrorMessage("Invalid username or password");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                    // Handle any errors here, or ignore them
+                }
+            });
+        });
+        function displayErrorMessage(message) {
+            // Create error message element
+            var errorMessage = $("<p></p>").text(message).addClass("error-message");
+
+            // Append error message to the sign-in form
+            $("#loginForm").append(errorMessage);
+        }
+    });
+
+</script>
+
+<style>
+    .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+<!-- Other JavaScript libraries and custom scripts -->
+<!-- Include your other scripts here -->
+
+</body>
+</html>
